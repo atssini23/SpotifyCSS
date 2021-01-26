@@ -1,0 +1,28 @@
+
+.App {
+  background-color: #131313;
+  height: calc(100vh - 90px);
+  color:white;
+}
+
+.navBar{
+  width: 200px;
+  height: 100%;
+  background: #040404;
+}
+
+.outerWrap {
+  background-color: #040404;
+  color: white;
+  height: 100vh;
+  min-height: 100%;
+}
+.musicControls {
+  background-color: #282828;
+  text-align: center;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  color: white;
+}
