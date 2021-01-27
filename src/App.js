@@ -3,7 +3,7 @@ import Nav from "./components/Nav";
 import Main from "./components/Main";
 import "./styles.scss";
 
-function App() {
+const App = () => {
   return (
     <div className="outerWrap">
       <div className="App">
@@ -13,5 +13,5 @@ function App() {
       <div className="musicControls">music controllers</div>
     </div>
   );
-}
+};
 export default App;
