@@ -1,18 +1,14 @@
 import React from "react";
+import Nav from "./components/Nav";
+import Main from "./components/Main";
 import "./styles.scss";
 
 function App() {
   return (
     <div className="outerWrap">
       <div className="App">
-        <div className="navBar">
-          <div className="logo">logo</div>
-          <ul>
-            <li>Home</li>
-            <li>Search</li>
-            <li>Your Library</li>
-          </ul>
-        </div>
+        <Nav />
+        <Main />
       </div>
       <div className="musicControls">music controllers</div>
     </div>
