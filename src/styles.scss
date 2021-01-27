@@ -1,8 +1,18 @@
+@font-family{
+  font-family:circular-book; //no fonts
+}
+
+
 * {
   box-sizing: border-box;
 }
 body { 
   margin:0; 
+}
+
+.subText{
+  font-size: 0.9rem;
+  color: #b3b3b3;
 }
 
 .App {
@@ -15,7 +25,7 @@ body {
 
 .navBar {
   width: 228px;
-  height: calc(100% - 10px);
+  height: 100%;
   background: #040404;
   padding: 10px 10px 0;
   display: flex;
@@ -43,6 +53,7 @@ body {
       transition: all 0.3s ease-in-out;
       &.active {
         background: #282828;
+        color: white;
       }
       &:hover {
         color: white;
@@ -79,37 +90,57 @@ body {
   color: white;
   z-index: 2;
   position: relative;
+  border-top: 1px solid #040404;
 }
 
 .upperNav {
-  background: #090909;
+  background: rgba(0, 9,9, 0.78);
   height: 56px;
   width: 100%;
   display: flex;
   align-items: center;
   color: white;
   padding: 0.5rem 2rem;
+  position: fixed;
+  top: 0;
+  z-index: 2;
 }
 
 .main {
   width: 100%;
+  overflow-y: scroll;
+  position: relative;
+  padding-top: 3.8rem;
   .mainContent {
     color: white;
     padding: 0.5rem 2rem;
-    h1 {
+    h1, h2 {
       font-size: 1.8rem;
     }
   }
 }
 
 .cardsWrap {
+  padding-bottom: 1.8rem;
+  h2{
+    margin-bottom: 0;
+  }
+  .subText{
+    margin-top: 0.5rem;
+  }
   .card {
     background: #282828;
     border-radius: 10px;
-    width: 180px;
+    width: 190px;
     overflow: hidden;
-    padding: 1.2rem;
+    padding: 1.2rem 1.2rem 0.8rem;
     box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    &:hover {
+      .playIcon {
+        opacity: 1;
+      }
+    }
     .cardImage {
       height: 160px;
       box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3),
@@ -120,12 +151,27 @@ body {
         object-fit: cover;
       }
     }
-    .cardCntent {
+    .cardContent {
       padding: 0.4rem 0;
       h3 {
         font-weight: 600;
-        font-size: 0.4rem;
+        font-size: 0.9rem;
+        margin-bottom: 0;
+      }
+      span{
+        font-size: 0.8rem;
+        color: #b3b3b3;
       }
     }
   }
+}
+
+.playIcon{
+  width: 10px;
+  height: 28px;
+  //border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  color: green;
+  margin-left: auto;
 }
